@@ -1,5 +1,5 @@
 export class Users {
-    constructor(public user: string){
+    constructor(public users: string){
 
     }
 }
