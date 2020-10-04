@@ -11,8 +11,8 @@ export class SearchUsersService {
 users: Users[]
   
 
-  getUser(){
-  let userEndpoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=joseph`;
+  getUser(searchTerm: string){
+  let userEndpoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${searchTerm}`;
    
   
   }
