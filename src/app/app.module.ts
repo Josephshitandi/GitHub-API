@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeRepoComponent } from './home-repo/home-repo.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HomeRepoComponent } from './home-repo/home-repo.component';
     HomepageComponent,
     NavComponent,
     HomeRepoComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
