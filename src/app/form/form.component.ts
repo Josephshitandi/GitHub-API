@@ -12,7 +12,8 @@ searchName: string = ""
 
   constructor() { }
   getName(){
-    this.searchTerm.emit(this.searchName)
+    this.searchTerm.emit(this.searchName);
+this.searchName = "";
   }
 
   ngOnInit(): void {
