@@ -13,14 +13,7 @@ export class GithubComponent implements OnInit {
 
   constructor(public searchUsers: SearchUserService) {}
   findUser(term: string){
-    this.searchUsers.getUser(term).then(
-      () => {
-        this.users = this.searchUsers.users;
-        this.noOfUsers = this.searchUsers.users.length;
-      },
-      (error) => {
-        console.log(error);
-      }
+    
     );
 
   }
