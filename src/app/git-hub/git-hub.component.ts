@@ -9,19 +9,24 @@ import { SearchUsersService } from '../search-users/search-users.service'
 })
 export class GitHubComponent implements OnInit {
   users: Users[];
-  noOfUsers: number;
+  // noOfUsers: number;
 
   constructor(public searchUsers: SearchUsersService) {}
-  findUser(searchTerm: string){
-    this.searchUsers.getUser(searchTerm).then(()=>{
-      this.users = this.searchUsers.users;
-      this.noOfUsers = this.searchUsers.users.length;
-    })
+  findUser(term: string){
+    this.searchUsers.getUser(term).then(
+      () => {
+        this.users = this.searchUsers.users;
+        // this.noOfUsers = this.searchUsers.users.length;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 
   }
  
   ngOnInit(): void {
-    this.findUser("joseph")
+    this.findUser('joseph')
   }
 
 }
