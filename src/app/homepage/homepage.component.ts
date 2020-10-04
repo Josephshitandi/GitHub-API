@@ -1,3 +1,5 @@
+import { Repos } from './../repos';
+import { MyReposService } from './../my-repos/my-repos.service';
 import { GitHub } from './../git-hub';
 import { MyAccountService } from './../my-account-services/my-account.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
   users: GitHub[];
-  constructor(private searchOwner: MyAccountService, private route: ActivatedRoute) { }
+  repos: Repos[];
+  constructor(private searchOwner: MyAccountService, private ownerRepo: MyReposService) { }
   getOner(term: string) {
     this.searchOwner.getOwners(term).then(
       () => {
@@ -21,6 +24,7 @@ export class HomepageComponent implements OnInit {
         console.log(error);
       }
     );
+    
 
   }
   ngOnInit(): void {

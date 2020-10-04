@@ -1,0 +1,24 @@
+<div class="user-repos row">
+  <div *ngFor="let repo of repos" class="col-md-3">
+    <div class="card" style="width: 18rem">
+      <div class="card-header">
+        <h5 class="card-title">{{ repo.name }}</h5>
+      </div>
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">
+          <strong>Language: </strong> {{ repo.language }}
+        </h6>
+        <div class="links">
+          <a href="{{ repo.github }}" class="btn btn-info">Github Link</a>
+          <a href="{{ repo.live }}" class="btn btn-warning">Live link</a>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <small>Created
+          <strong>{{ repo.date | dateCount }}</strong>
+          ago</small>
+      </div>
+    </div>
+  </div>
+</div>

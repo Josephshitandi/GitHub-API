@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeRepoComponent } from './home-repo/home-repo.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NavComponent } from './nav/nav.component';
     FormComponent,
     HomepageComponent,
     NavComponent,
+    HomeRepoComponent,
   ],
   imports: [
     BrowserModule,
