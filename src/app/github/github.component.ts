@@ -3,6 +3,7 @@ import { Repos } from './../repos';
 import { Component, OnInit } from '@angular/core';
 import { Users } from '../users';
 import { SearchUserService } from '../search-user/search-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-github',
@@ -15,7 +16,7 @@ export class GithubComponent implements OnInit {
   noOfUsers: number;
   noOfRepos: number;
 
-  constructor(public searchUsers:  SearchUserService, public searchRepos: SearchRepositoriesService) {}
+  constructor(public searchUsers:  SearchUserService, public searchRepos: SearchRepositoriesService,private router: Router) {}
   findUser(term: string){
     this.searchUsers.getUser(term).then(
       () => {

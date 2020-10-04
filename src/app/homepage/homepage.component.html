@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<br />
+<div class="container-fluid">
+  <div class="user-pic-name">
+    <div *ngFor="let user of users" class="details">
+      <img src="{{ user.image }}" alt="" />
+      <h4>{{ user.name }}</h4>
+    </div>
+  </div>
+
+  <!-- <app-user-repos [user]="user"></app-user-repos> -->
+</div>

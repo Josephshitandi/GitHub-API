@@ -9,8 +9,8 @@ import { environment } from './../../environments/environment'
 export class SearchUsersService {
 users: Users[]
   
-
-getUser(term: string) {
+g
+etUser(term: string) {
   let endPoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${term}`;
   let promise = new Promise((resolve, reject) => {
     this.http
