@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class SearchUserService {
   users: Users[]
-  
+
 
   getUser(term: string) {
     let endPoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${term}`;
@@ -24,7 +24,7 @@ export class SearchUserService {
               let image = results['items'][i]['avatar_url'];
               let github = results['items'][i]['html_url'];
               let liveLink = results['items'][i]['repos_url'];
-              let user = new Users(i +1, name, image,github,liveLink,);
+              let user = new Users(i + 1, name, image, github, liveLink,);
               this.users.push(user);
             }
             resolve();
@@ -37,7 +37,7 @@ export class SearchUserService {
     });
     return promise;
   }
-  
-  constructor(private http: HttpClient) {}
-  }
-  
+
+  constructor(private http: HttpClient) { }
+}
+
