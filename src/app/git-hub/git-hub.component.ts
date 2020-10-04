@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from '../users'
+import { Users } from '../users';
+import { SearchUsersService } from '../search-users/search-users.service'
 
 @Component({
   selector: 'app-git-hub',
@@ -9,7 +10,9 @@ import { Users } from '../users'
 export class GitHubComponent implements OnInit {
   users: Users[];
 
-  constructor() { }
+  constructor(public searchUsers: SearchUsersService) { }
+  
+
 
   ngOnInit(): void {
   }

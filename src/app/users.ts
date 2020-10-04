@@ -1,5 +1,5 @@
 export class Users {
-    constructor(public users: string){
+    constructor(public name:string, public image: string, public github: string, public livelink: string){
 
     }
 }
