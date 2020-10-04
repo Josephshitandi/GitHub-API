@@ -11,7 +11,7 @@ export class GithubComponent implements OnInit {
   users: Users[];
   noOfUsers: number;
 
-  constructor(public  SearchUserService) {}
+  constructor(public searchUsers:  SearchUserService) {}
   findUser(term: string){
     this.searchUsers.getUser(term).then(
       () => {
