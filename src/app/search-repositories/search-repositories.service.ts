@@ -24,7 +24,7 @@ export class SearchRepositoriesService {
               let day = parseInt(results['items'][i]['created_at'].substr(8, 10));
               let date = new Date(year, month, day);
               let github = results['items'][i]['html_url'];
-              let live = results['items'][i]['homepage'];
+              let live = results['items'][i]['svn_url'];
               let repo = new Repos(i + 1,fullName,description,language,date,github,live);
               this.repos.push(repo);
             }

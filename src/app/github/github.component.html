@@ -1,20 +1,42 @@
+<app-form (searchTerm)="findUser($event)"></app-form>
 <div class="">
-  <div class="row col-md-6">
-    <div *ngFor="let user of users" class="col-md-6">
+  <div class="row">
+    <div class="col-md-6">
+        <H2>USERS</H2>
       <div class="row">
-        <div class="card" style="width: 18rem;">
-          <img src="{{user.image}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{user.name}}</h5>
-          </div>
-          <div class="card-body">
-            <a href="{{user.github}}" class="card-link">Github Link</a>
+        <div *ngFor="let user of users">
+          <div class="card " style="width: 18rem; ">
+            <img src="{{user.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{user.name}}</h5>
+            </div>
+            <div class="card-body">
+              <a href="{{user.github}}" class="card-link">Github Link</a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
     <div class="col-md-6">
-
+        <h2>REPOSITORIES</h2>
+        <div class="row">
+      <div *ngFor="let repo of repos" class="col-md-6">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{repo.fullName}}</h5>
+              <h5 class="card-title">{{repo.description}}</h5>
+              <h5 class="card-title">{{repo.language}}</h5>
+              <h5 class="card-title">{{repo.date|date|uppercase}}</h5>
+              <p>This repository was created {{repo.date|dateCount}} days ago</p>
+            </div>
+            <div class="card-body">
+              <a href="{{repo.github}}" class="card-link">Github Link</a>
+              <!-- <a href="{{repo.live}}" class="card-link">Live Link</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
