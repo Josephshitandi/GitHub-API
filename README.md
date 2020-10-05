@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td>
- Quotes is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. User canCreate a new quote, Upvote or downvote a quote, Delete a quote and See the number of upvotes and number of downvotes for each quote.
+ Github app is a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 </td>
 </tr>
 </table>
