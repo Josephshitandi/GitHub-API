@@ -4,14 +4,14 @@
   <div class="row">
     <div class="col-md-6">
       <div class="user-pic-name">
-        <div *ngFor="let user of users" class="details">
-          <img src="{{ user.image }}" alt="" />
+        <div class="details">
+          <img src="{{user.image }}" alt="">
           <h4>{{ user.name }}</h4>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-     <app-home-repo  [users]="users"></app-home-repo>
+     <app-home-repo  [user]="user"></app-home-repo>
     </div>
   </div>
 </div>

@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeRepoComponent } from './home-repo/home-repo.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NavComponent,
     HomeRepoComponent,
     NotFoundComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

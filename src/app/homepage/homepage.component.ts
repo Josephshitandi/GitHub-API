@@ -12,13 +12,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  users: GitHub[];
+  user: GitHub;
   repos: Repos[];
   constructor(private searchOwner: MyAccountService, private ownerRepo: MyReposService) { }
   getOner(term: string) {
     this.searchOwner.getOwners(term).then(
       () => {
-        this.users = this.searchOwner.users;
+        this.user = this.searchOwner.users[0];
       },
       (error) => {
         console.log(error);

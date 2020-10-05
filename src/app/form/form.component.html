@@ -1,5 +1,5 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-success">
-   <a class="navbar-brand" routerLink="/homepage" routerLinkActive='active'>Github</a>
+   <a class="navbar-brand" routerLink="/homepage" routerLinkActive='active' appHighlight>Github</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
@@ -8,10 +8,10 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item active">
-         <a class="nav-link" routerLink="/homepage" routerLinkActive='active'>Home <span class="sr-only">(current)</span></a>
+         <a class="nav-link" routerLink="/homepage" routerLinkActive='active' appHighlight>Home <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" routerLink="/github" routerLinkActive='active'>Search</a>
+         <a class="nav-link" routerLink="/github" routerLinkActive='active' appHighlight>Search</a>
        </li>
      </ul>
      <form class="form-inline">
@@ -20,7 +20,7 @@
          <input type="text" class="form-control" id="term" [(ngModel)]="searchName" name="term"
            placeholder="Search Name">
        </div>
-       <button type="submit" (click)="getName()" class="btn btn-primary mb-2">
+       <button type="submit" (click)="getName()" class="btn btn-primary mb-2" appHighlight>
          Search
        </button>
      </form>

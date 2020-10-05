@@ -11,15 +11,15 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class HomeRepoComponent implements OnInit {
   repos: Repos[];
-@Input() users: GitHub;
+@Input() user: GitHub;
   constructor(private findRepo: MyReposService) { }
 
   ngOnInit(): void {
-    this.getMyRepos(this.users.live);
+    this.getMyRepos(this.user.live);
   }
 
   getMyRepos(endpoint) {
-    this.findRepo.getRepos(endpoint).then(
+    this.findRepo.getMyRepos(endpoint).then(
       () => {
         this.repos = this.findRepo.repos;
       },
